@@ -1,0 +1,174 @@
+.section-1 {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/dark-bg.jpeg");
+    @include image-set;
+    position: relative;
+}
+
+.section-2 {
+    width: 100%;
+    height: 100vh;
+    background-color: $color-dark-grey;
+    display: flex;
+    align-items: center;
+    padding: 0 10rem;
+    position: relative;
+
+    @include respond(tab-land) {
+        height: 120vh;
+    }
+
+    @include respond(phone) {
+       height: 100vh; 
+    }
+
+    &__paragraph {
+        width: 100rem;
+        position: absolute;
+        bottom: 8rem;
+        right: 15rem;
+        font-size: 2rem;
+        color: $color-grey-light-2;
+        border-top: .3rem double $color-grey-light-3;
+        border-bottom: .3rem double $color-grey-light-3;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        text-shadow: 1rem 1rem 2rem $color-black-limpid-5;
+        line-height: 1.5;
+
+        @include respond(big-desktop) {
+            width: 90rem;
+            right: 10rem;
+        }
+
+        @include respond(desktop) {
+            width: 85rem;
+            right: 5rem;
+            bottom: 10rem;
+        }
+
+        @include respond(tab-land) {
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80rem;
+        }
+
+        @include respond(phone-small) {
+            width: 60rem;
+        }
+
+        @include respond(mini-phone) {
+            width: 55rem;
+            bottom: 5rem;
+        }
+    }
+
+    &__left-quote {
+        align-self: flex-start;
+        font-size: 5rem;
+        margin-bottom: 2rem;
+    }
+
+    &__right-quote {
+        align-self: flex-end;
+        font-size: 5rem;
+    }
+}
+
+.section-3 {
+    width: 100%;
+    height: 100vh;
+    background-color: $color-dark-grey-2;
+    display: flex;
+    align-items: center;
+    padding-left: 10rem;
+
+    @include respond(tab-land) {
+        height: auto;
+        padding: 5rem 0 10rem 0;
+    }
+
+    .section-heading__line {
+
+        @include respond(big-desktop) {
+            margin-right: 3rem;
+        }
+    }
+
+    .section-heading {
+
+        @include respond(tab-land) {
+            margin-bottom: 7rem;
+        }
+    }
+}
+
+.section-4 {
+    width: 100%;
+    height: 100vh;
+    background-color: $color-dark-grey-4;
+    display: flex;
+    align-items: center;
+    padding: 0 10rem;
+
+    @include respond(tab-land) {
+        height: auto;
+        padding: 5rem 0;
+    }
+
+    &__details {
+        display: flex;
+        margin-bottom: 8rem;
+
+        div {
+            width: 25rem;
+            text-align: center;
+            margin: 4rem;
+
+            @include respond(phone) {
+                margin: 3rem 2rem;
+            }
+
+            @include respond(phone-small) {
+                width: 18rem;
+                margin: 3rem 1rem;
+            }
+
+            @include respond(mini-phone) {
+                margin: 3rem 0;
+            }
+        }
+
+        i {
+            font-size: 5rem;
+            color: $color-maple;
+        }
+
+        h3 {
+            font-family: 'MADE Soulmaze', sans-serif;
+            font-size: 2.5rem;
+            margin: 2rem 0;
+            color: $color-grey-light-4;
+        }
+
+        p {
+            font-size: 1.6rem;
+            color: $color-grey-light-3;
+        }
+    }
+}
+
+.section-1,
+.section-2,
+.section-3,
+.section-4 {
+
+    @include respond(tab-land) {
+        flex-direction: column;
+    }
+}
